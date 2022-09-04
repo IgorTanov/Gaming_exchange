@@ -26,42 +26,40 @@ const Main = (props) => {
       latterList[elem.name[0]].push({ elem })
     }
   })
-
+  // ----------------------------------------------------------------------------------------
   const ServiceBlock = (props) => {
-    const {service, name, id}  = props
-    const serviceElements = props.service.map(elem => {
-      const key = (String(props.name) + String(props.id) + String(elem.id)).replace(/ /g, '')
-console.log(key)
+    const { services, gameId, name } = props
+    const serv = services.map(e => {
+      const id = name + String(gameId) + String(e.id)
+      console.log(id)
       return (
-
-        <li key={key}>{elem}</li>
+        <li key={id}>{e}</li>
       )
     })
     return (
-      <div className="service-block">
+      <div className="services">
         <ul>
-          {serviceElements}
+          {serv}
         </ul>
       </div>
     )
   }
 
+
+
+
+
+  // ------------------------------------------------------------------------------------
   const LetterBlock = (props) => {
     const { games, letter } = props;
     const items = games.map((item) => {
-      // console.log(item.elem.name)
-      // console.log(item.elem.id)
+
       return (<div key={item.elem.name} className="game-div">
         <span>{item.elem.name}</span>
-        <ServiceBlock service={item.elem.services} name={item.elem.name} key={item.elem.id} />
+        <ServiceBlock services={item.elem.services} gameId={item.elem.id} name={item.elem.name} />
       </div>)
     }
     )
-    // const serviceElements=Object.keys(latterList).map(e=>{
-
-    // })
-
-
 
     return (
       <div className="letter-box">
@@ -69,12 +67,19 @@ console.log(key)
         <div className="letter-game">
           {items}
         </div>
+        <div className="services-block">
+        </div>
       </div>)
   }
   let latterIndex = Object.keys(latterList)
     .map(letter => {
-      return (<LetterBlock letter={letter} games={latterList[letter]} key={letter} />)
+
+      return (<div>
+        <LetterBlock letter={letter} games={latterList[letter]} key={letter} />
+
+      </div>)
     });
+  //  -----------------------------------------------------------------------------------   
   return (
     <div className="main-div">
       <div className="letter-navigation">
@@ -86,6 +91,11 @@ console.log(key)
     </div>
   )
 }
+
+
+
+
+
 export default Main
 
 
