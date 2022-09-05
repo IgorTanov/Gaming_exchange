@@ -8,6 +8,7 @@ import { getList } from "../../../../service/service";
 import Latter from "../../../latter/latter";
 import { Link } from "react-router-dom";
 import Navigation from "./navigation/navigation";
+import Game from "../game/game";
 
 
 const Main = (props) => {
@@ -28,6 +29,8 @@ const Main = (props) => {
     }
   })
   // ----------------------------------------------------------------------------------------
+
+  
   const ServiceBlock = (props) => {
     const { services, gameId, name } = props
     const serv = services.map(e => {
@@ -54,7 +57,7 @@ const Main = (props) => {
   const LetterBlock = (props) => {
     const { games, letter } = props;
     const items = games.map((item) => {
-      return (<div key={item.elem.name} className="game-div">
+      return (<div key={item.elem.name} className="game-div" >
         <Link to={"/game?=" + item.elem.name}>
           <span className="game-name">{item.elem.name}</span>
         </Link>
@@ -90,9 +93,6 @@ const Main = (props) => {
     </div>
   )
 }
-
-
-
 
 
 export default Main
