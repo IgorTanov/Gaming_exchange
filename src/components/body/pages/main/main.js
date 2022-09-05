@@ -9,6 +9,7 @@ import Latter from "../../../latter/latter";
 import { Link } from "react-router-dom";
 import Navigation from "./navigation/navigation";
 
+
 const Main = (props) => {
 
   const [data, setData] = useState([])
@@ -31,9 +32,13 @@ const Main = (props) => {
     const { services, gameId, name } = props
     const serv = services.map(e => {
       const id = name + String(gameId) + String(e.id)
-      console.log(id)
       return (
-        <li key={id}>{e}</li>
+        <Link to={'/game?=' + name + "/service?=" + e.name}>
+          <div className="service-list">
+          <img src="" width={25} height={25}></img>
+            <li key={id}>{e.name}</li>
+          </div>
+        </Link>
       )
     })
     return (
@@ -45,22 +50,18 @@ const Main = (props) => {
     )
   }
 
-
-
-
-
   // ------------------------------------------------------------------------------------
   const LetterBlock = (props) => {
     const { games, letter } = props;
     const items = games.map((item) => {
-
       return (<div key={item.elem.name} className="game-div">
-        <span>{item.elem.name}</span>
+        <Link to={"/game?=" + item.elem.name}>
+          <span className="game-name">{item.elem.name}</span>
+        </Link>
         <ServiceBlock services={item.elem.services} gameId={item.elem.id} name={item.elem.name} />
       </div>)
     }
     )
-
     return (
       <div className="letter-box">
         <div className="letter-index" id={"letter" + letter}>{letter}</div>
@@ -73,10 +74,8 @@ const Main = (props) => {
   }
   let latterIndex = Object.keys(latterList)
     .map(letter => {
-
       return (<div>
         <LetterBlock letter={letter} games={latterList[letter]} key={letter} />
-
       </div>)
     });
   //  -----------------------------------------------------------------------------------   

@@ -13,8 +13,8 @@
     flex-wrap: wrap;
 }
  .game-div{
-    width: 100px;
-    height: 100px;
+   
+    
     background-color: beige;
     margin: 5px 5px 5px 5px;
  }
@@ -36,4 +36,14 @@
     align-items: center;
     justify-content: flex-start;
     
+ }
+ .icon-img{
+    width: 25px;
+    height: 25px;
+    background-color: red;
+ }
+ .service-list{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
  }
