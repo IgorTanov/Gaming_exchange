@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 100%;
     margin-bottom: 20px;
-    
+    width: 100vw
     
 }
 .letter-game{
@@ -13,14 +13,21 @@
     flex-wrap: wrap;
 }
  .game-div{
-   
-    
-    background-color: beige;
+   background-color: gainsboro;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: nowrap;
+   margin: 5px 5px 5px 5px;
+   width: 15%;
+   align-items: stretch;
     margin: 5px 5px 5px 5px;
+    width: 15%;
+   
  }
- .letter-index{
-    background-color:rgb(98, 135, 204);
+ .game-name{
+   color: rgb(53, 13, 210);
  }
+
  .main-div{
     display: flex;
     flex-direction: row;
@@ -43,7 +50,30 @@
     background-color: red;
  }
  .service-list{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
+   display: flex;
+   flex-direction: column;
  }
+ ul{
+   display: flex;
+   flex-direction: column;
+   padding-left: 0;
+   align-items: stretch;
+   
+ }
+.services{
+   width: 100%;
+   padding: 10px
+}
+.letter-index{
+   font-size: 150%;
+   color: rgb(29, 157, 221);
+}
+.game-div a{
+   display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.navigation{
+   font-size: 75%;
+   font-family: Arial, Helvetica, sans-serif;
+}

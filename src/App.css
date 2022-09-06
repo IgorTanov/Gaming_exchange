@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
-div{
-  border: 1px solid rgb(92, 185, 243);
+
+*{
+  box-sizing: border-box;
+  text-decoration: none;
+
 }

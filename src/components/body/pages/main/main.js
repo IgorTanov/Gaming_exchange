@@ -9,6 +9,8 @@ import Latter from "../../../latter/latter";
 import { Link } from "react-router-dom";
 import Navigation from "./navigation/navigation";
 import Game from "../game/game";
+import Button from 'react-bootstrap/Button';
+
 
 
 const Main = (props) => {
@@ -36,10 +38,10 @@ const Main = (props) => {
     const serv = services.map(e => {
       const id = name + String(gameId) + String(e.id)
       return (
-        <Link to={'/game?=' + name + "/service?=" + e.name}>
-          <div className="service-list">
-          <img src="" width={25} height={25}></img>
-            <li key={id}>{e.name}</li>
+        <Link to={  "/game?id=" + e.id}>
+          <div className="service-list">{' '}
+           <Button variant="Dark" key={id}>{e.name}</Button>  
+           {/* <li key={id}>{e.name}</li>  */}
           </div>
         </Link>
       )
@@ -58,8 +60,10 @@ const Main = (props) => {
     const { games, letter } = props;
     const items = games.map((item) => {
       return (<div key={item.elem.name} className="game-div" >
-        <Link to={"/game?=" + item.elem.name}>
-          <span className="game-name">{item.elem.name}</span>
+        <Link to={"/game?game=" + item.elem.name}>
+        <Button variant="danger">{item.elem.name}</Button>
+
+          {/* <span className="game-name">{item.elem.name}</span> */}
         </Link>
         <ServiceBlock services={item.elem.services} gameId={item.elem.id} name={item.elem.name} />
       </div>)
