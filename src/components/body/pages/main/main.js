@@ -30,22 +30,20 @@ const Main = (props) => {
   })
   // ----------------------------------------------------------------------------------------
 
-  
+
   const ServiceBlock = (props) => {
     const { services, gameId, name } = props
     const serv = services.map(e => {
       const id = name + String(gameId) + String(e.id)
       return (
-        <Link to={  "/game?id=" + e.id}>
-          <div className="service-list" key={id}>
-          {e.name}
-          </div>
+        <Link to={"/game?id=" + e.id}>
+          <Button variant="light" className="service-list" key={id} >{e.name}</Button><br/>
         </Link>
       )
     })
     return (
       <div className="services">
-        <ul>
+        <ul className="ul-service-list">
           {serv}
         </ul>
       </div>
@@ -58,9 +56,7 @@ const Main = (props) => {
     const items = games.map((item) => {
       return (<div key={item.elem.name} className="game-div" >
         <Link to={"/game?game=" + item.elem.name}>
-        <Button variant="danger">{item.elem.name}</Button>
-
-          {/* <span className="game-name">{item.elem.name}</span> */}
+          <Button variant="dark">{item.elem.name}</Button>
         </Link>
         <ServiceBlock services={item.elem.services} gameId={item.elem.id} name={item.elem.name} />
       </div>)
@@ -85,9 +81,6 @@ const Main = (props) => {
   //  -----------------------------------------------------------------------------------   
   return (
     <div className="main-div">
-      <div className="letter-navigation">
-        <Navigation />
-      </div>
       <div className="all-games-div">
         {latterIndex}
       </div>

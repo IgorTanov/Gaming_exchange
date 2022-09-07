@@ -1,21 +1,37 @@
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 import "./form-registration.css"
 
+function FormRegistration() {
+  return (
+    <Form className='form-registration'>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Text className="text-muted">
+          We'll never share your email with anyone else.
+        </Form.Text>
+      </Form.Group>
 
-const FormRegistration=()=>{
-return(
-    <div>
-        <form>
-            <input type="text" placeholder="Enter your nickname"></input>
-            <span className="nickname-error"></span>
-            <input type="email" placeholder="Enter your mail"></input>
-            <span className="mail-error" ></span>
-            <input type="password" placeholder="your password"></input>
-            <span className="pass-error"></span>
-            <input type="password" placeholder="repeat password"></input>
-            <span className="pass-error"></span>
-            <input type="submit" value='registration'/> 
-        </form>
-    </div>
-)
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Nickname</Form.Label>
+        <Form.Control type="text" placeholder="Enter nickname" />
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control type="password" placeholder="Password" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label>Repeat Password </Form.Label>
+        <Form.Control type="password" placeholder="Repeat password" />
+      </Form.Group>
+      
+      <Button variant="dark" type="submit">
+        Registration
+      </Button>
+    </Form>
+  );
 }
-export default FormRegistration
+
+export default FormRegistration;

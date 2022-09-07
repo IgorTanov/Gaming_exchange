@@ -5,6 +5,7 @@ import { useSearchParams } from "react-router-dom"
 import { getLots, getGame } from "../../../../service/service"
 import VariantsExample from "../../../spinner/spinner"
 import "./game.css"
+import Button from 'react-bootstrap/Button';
 
 
 const Game = (props) => {
@@ -26,15 +27,17 @@ const Game = (props) => {
 
     if (gameData === undefined) {
         return (
-            <VariantsExample/>
+            <VariantsExample />
         )
     }
-
     const gameServices = gameData.services.map((elem) => {
         return (
-            <div key={elem.id} className="div-game-service">
+
+            <Button variant="outline-dark" key={elem.id} className="div-game-service">
                 {elem.name}
-                </div>
+            </Button>
+
+
         )
     })
     return (

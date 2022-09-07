@@ -24,3 +24,10 @@
     background-color:rgb(20, 32, 142);
     color:aliceblue
 }
+.d-flex{
+    flex-direction: row;
+}
+.nav-bar {
+    position: sticky;
+    top: 0;
+}

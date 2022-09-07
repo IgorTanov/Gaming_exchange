@@ -5,3 +5,9 @@ form{
     flex-wrap: nowrap;
     justify-content: space-evenly;
 }
+.body{
+    text-align: center;
+}
+.form-registration div{
+    max-width: 400px;
+}

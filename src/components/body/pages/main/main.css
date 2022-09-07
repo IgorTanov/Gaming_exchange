@@ -1,82 +1,101 @@
-.letter-box{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 20px;
-    width: 100vw
-    
+.letter-box {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+
+   width: 100vw
 }
-.letter-game{
-    display: flex;
+
+.letter-game {
+   display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
- .game-div{
-   background-color: gainsboro;
+
+.game-div {
+   
    display: flex;
    flex-direction: column;
    flex-wrap: nowrap;
-   margin: 5px 5px 5px 5px;
+
    width: 15%;
    align-items: stretch;
-    margin: 5px 5px 5px 5px;
-    width: 15%;
-   
- }
- .game-name{
+   margin: 5px 5px 5px 5px;
+   width: 15%;
+
+}
+
+.game-name {
    color: rgb(53, 13, 210);
- }
+}
 
- .main-div{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: stretch;
-    grid-template-columns: repeat(3, 80px)
-
- }
- .all-games-div{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    
- }
- .icon-img{
-    width: 25px;
-    height: 25px;
-    background-color: red;
- }
- .service-list{
+.main-div {
    display: flex;
-   flex-direction: column;
- }
- ul{
-   display: flex;
-   flex-direction: column;
-   padding-left: 0;
+   flex-direction: row;
+   justify-content: flex-start;
    align-items: stretch;
-   
- }
-.services{
+   grid-template-columns: repeat(3, 80px)
+}
+
+.all-games-div {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+
+}
+
+.icon-img {
+   width: 25px;
+   height: 25px;
+   background-color: red;
+}
+
+.service-list {
+  
+}
+
+ul {
+   display: flex;
+   flex-direction: column;
+   padding-left: 0rem;
+   align-items: stretch;
+
+}
+
+.services {
    width: 100%;
    padding: 10px
 }
-.letter-index{
+
+.letter-index {
    font-size: 150%;
    color: rgb(29, 157, 221);
 }
-.game-div a{
+
+.game-div a {
    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+   flex-direction: column;
+   align-items: stretch;
 }
-.navigation{
+
+.navigation {
    font-size: 75%;
    font-family: Arial, Helvetica, sans-serif;
 }
-.service-list:hover{
-   background-color:rgb(171, 149, 191)
+
+.ul-service-list{
+   padding-left: 0;
+}
+link {
+   text-decoration: none;
+}
+ul.ul-service-list a{
+   text-decoration: none;
+}
+.game-div a{
+   text-decoration: none;
 }
