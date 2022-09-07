@@ -41,7 +41,7 @@ const Game = (props) => {
         )
     })
     return (
-        <div>
+        <div className="div-game-services">
             <div className="div-game-name">{gameData.name}</div>
             <div className="game-description">{gameData.description}</div>
             <div className="game-all-services">{gameServices}</div>

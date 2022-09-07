@@ -55,7 +55,7 @@ const Main = (props) => {
     const { games, letter } = props;
     const items = games.map((item) => {
       return (<div key={item.elem.name} className="game-div" >
-        <Link to={"/game?game=" + item.elem.name}>
+        <Link to={"/game?id=" + item.elem.services[0].id}>
           <Button variant="dark">{item.elem.name}</Button>
         </Link>
         <ServiceBlock services={item.elem.services} gameId={item.elem.id} name={item.elem.name} />
@@ -64,12 +64,12 @@ const Main = (props) => {
     )
     return (
       <div className="letter-box">
-        <div className="letter-index" id={"letter" + letter}>{letter}</div>
+        <div className="letter-index" id={"letter" + letter}>{letter}</div><br/><br/>
         <div className="letter-game">
           {items}
         </div>
         <div className="services-block">
-        </div>
+        </div><hr/>
       </div>)
   }
   let latterIndex = Object.keys(latterList)
