@@ -1,8 +1,6 @@
 import "./main.css"
 import Cards from '../../../cards/cards';
-import d4 from "./d4.png"
-import wow from "./wow.png"
-import d3 from "./d3.png"
+
 import { useEffect, useState } from "react";
 import { getList } from "../../../../service/service";
 import Latter from "../../../latter/latter";

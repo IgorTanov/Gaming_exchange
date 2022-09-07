@@ -8,10 +8,20 @@ const getList = (setData) => {
         setData(response)
     })
 }
-const getGame=(setData,id)=>{
-    fetch("http://it-server.relikt.monster/api/game/"+id).then(response =>response.json()).then(response => {
-        setData(response.games_id)
+const getLots=(setData,id)=>{
+    fetch("http://it-server.relikt.monster/api/lots/"+id).then(response =>response.json()).then(response => {
+        setData(response)
+       
  })
 }
-// response.json()   .then(response =>response.json())
-export { getList,getGame }
+const getGame=(setGameData,setData)=>{
+    fetch("http://it-server.relikt.monster/api/game/"+setData).then(response =>response.json()).then(response => {
+        setGameData(response)
+        
+        
+      
+ })
+}
+
+
+export { getList,getLots,getGame }

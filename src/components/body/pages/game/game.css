@@ -1,0 +1,18 @@
+.div-game-name{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+.game-all-services{
+    
+        height: 60px;
+    
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+}
