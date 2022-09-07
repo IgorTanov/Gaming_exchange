@@ -37,9 +37,8 @@ const Main = (props) => {
       const id = name + String(gameId) + String(e.id)
       return (
         <Link to={  "/game?id=" + e.id}>
-          <div className="service-list">{' '}
-           <Button variant="Dark" key={id}>{e.name}</Button>  
-           {/* <li key={id}>{e.name}</li>  */}
+          <div className="service-list" key={id}>
+          {e.name}
           </div>
         </Link>
       )

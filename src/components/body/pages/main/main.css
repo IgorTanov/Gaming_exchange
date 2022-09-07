@@ -77,3 +77,6 @@
    font-size: 75%;
    font-family: Arial, Helvetica, sans-serif;
 }
+.service-list:hover{
+   background-color:rgb(171, 149, 191)
+}
