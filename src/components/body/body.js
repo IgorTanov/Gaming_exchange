@@ -9,7 +9,7 @@ import FormEnter from "./pages/form-enter/form-enter";
 const Body = () => {
     return (
         <div className="body" >
-            <div>test</div>
+            <div>++++test++++</div>
             <Routes>
                 <Route path="/" element={<Main/>} />
                 <Route path="game" element={<Game/>}/>
