@@ -10,6 +10,7 @@ const Body = () => {
     return (
         <div className="body" >
             <div>Hello</div>
+            <div>goodbye</div>
             <Routes>
                 <Route path="/" element={<Main/>} />
                 <Route path="game" element={<Game/>}/>
