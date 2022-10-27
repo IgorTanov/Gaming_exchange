@@ -19,9 +19,9 @@ const Cards = ({ img, name }) => {
           <Card.Title>{name}</Card.Title>
         </Card.Body>
         <Card.Body className="card-link">
-          <Card.Link href="#">Acounts</Card.Link>
-          <Card.Link href="#">Gold</Card.Link>
-          <Card.Link href="#">Items</Card.Link>
+          <Card.Link >Acounts</Card.Link>
+          <Card.Link >Gold</Card.Link>
+          <Card.Link >Items</Card.Link>
         </Card.Body>
       </Card>
     </div>
