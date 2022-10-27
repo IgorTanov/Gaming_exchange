@@ -1,7 +1,7 @@
-import { BrowserRouter } from 'react-router-dom';
-import './App.css';
-import Container from './components/container/conatainer';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter } from "react-router-dom";
+import "./App.css";
+import Container from "./components/container/conatainer";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
@@ -9,7 +9,6 @@ function App() {
       <BrowserRouter>
         <Container />
       </BrowserRouter>
-
     </div>
   );
 }
