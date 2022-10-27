@@ -1,7 +1,6 @@
 import { useState } from "react";
-import Main from "../components/body/pages/main/main";
 import Game from "../components/body/pages/game/game";
-import { useSearchParams } from "react-router-dom";
+
 
 const getList = (setData) => {
   fetch("http://it-server.relikt.monster/api/games")

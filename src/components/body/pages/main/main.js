@@ -1,12 +1,7 @@
 import "./main.css";
-import Cards from "../../../cards/cards";
-
 import { useEffect, useState } from "react";
 import { getList } from "../../../../service/service";
-import Latter from "../../../latter/latter";
 import { Link } from "react-router-dom";
-import Navigation from "./navigation/navigation";
-import Game from "../game/game";
 import Button from "react-bootstrap/Button";
 
 const Main = (props) => {

@@ -1,5 +1,4 @@
-import { useMemo, useState } from "react";
-import Main from "../main/main";
+import { useState } from "react";
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { getLots, getGame } from "../../../../service/service";

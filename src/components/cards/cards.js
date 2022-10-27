@@ -1,7 +1,5 @@
 import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
 import "./cards.css";
-import Main from "../body/pages/main/main";
 
 const Cards = ({ img, name }) => {
   return (
